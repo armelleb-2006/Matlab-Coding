@@ -1,0 +1,18 @@
+clear all; clc;
+f = @(x) 3*x.^3 - x.^2 + 1.5*x - 2;
+a = -5;
+b = 5;
+%local function
+FunctionPlotter(f, a, b);
+function FunctionPlotter(poly, startPt, endPt)
+% Create vector
+x = linspace(startPt, endPt, 100);
+% Evaluate function
+y = poly(x);
+% Plot function
+plot(x, y, 'b-', 'LineWidth', 2);
+grid on;
+xlabel('x');
+ylabel('f(x)');
+title('Function Plotter');
+end
