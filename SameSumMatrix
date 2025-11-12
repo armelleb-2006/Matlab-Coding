@@ -1,0 +1,16 @@
+>> clear all;clc; %% Sum of cubes 1-100 using a for loop
+sumCubes = 0;
+for j = 1:100
+sumCubes = sumCubes + j^3;
+end
+disp("Sum of cubes from the for loop is " + sumCubes);
+%% Formula for sum of cubes
+n = 100;
+formulaSum = (n^2 * (n + 1)^2) / 4;
+disp("Sum of cubes from the formula is " + formulaSum);
+%% Compare values
+if sumCubes == formulaSum
+disp("The two sums are the same.");
+else
+disp("The two sums are not the same.");
+end
