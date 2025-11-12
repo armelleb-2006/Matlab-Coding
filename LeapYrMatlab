@@ -1,0 +1,20 @@
+>> clear all; clc;
+% user input
+month = input('Enter a month: ', 's');
+month = lower(month); % convertion for case-insensitivity
+days = 0;
+% Switch statement for months
+switch month
+case {'january','march','may','july','august','october','december'}
+days = 31;
+case {'april','june','september','november'}
+days = 30;
+case 'february'
+days = 28; % not a leap year
+end
+% Display
+if days ~= 0
+fprintf('%s has %d days.\n', month, days);
+else
+fprintf('"%s" is not a valid month.\n', month);
+end
