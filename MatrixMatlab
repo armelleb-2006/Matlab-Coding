@@ -1,0 +1,19 @@
+function result = ColRem()
+% Ask the user for matrix
+matrix = input('Enter your matrix: ');
+disp('Original matrix:');
+disp(matrix);
+% Ask the user which column to remove
+colNum = input('Enter the column number to remove: ');
+% Check validity
+if colNum >= 1 && colNum <= size(matrix,2)
+% Remove designated column
+result = matrix(:, [1:colNum-1, colNum+1:end]);
+else
+disp('Invalid column number');
+result = matrix;
+end
+% Show result
+disp('Matrix after removing the column:');
+disp(result);
+end
